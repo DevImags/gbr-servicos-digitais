@@ -1,460 +1,361 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GBR’s Serviços Digitais® — Presença digital para negócios reais</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>GBR's Serviços Digitais — Presença digital para negócios reais</title>
+  <meta name="description" content="Do Google Maps ao seu próprio site: ajudamos sua empresa a aparecer, transmitir confiança e conquistar novas oportunidades." />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'sans-serif'],
-          },
           colors: {
-            brand: {
-              bg: '#F7F8F5',
-              sage: '#E4E9DC',
-              sageLight: '#E9EDE3',
-              forest: '#182921',
-              forestHover: '#22382E',
-              lime: '#D7F267',
-              limeHover: '#CBEB4B',
-              muted: '#5C6660',
-              border: '#E2E6DC',
+            forest: {
+              950: '#13221c',
+              900: '#192b24',
+              800: '#243c32',
+            },
+            limebrand: {
+              300: '#d7f466',
+              400: '#c8ea4b',
+            },
+            sage: {
+              50: '#f7f8f4',
+              100: '#eff2e8',
+              200: '#e5eadc',
+              300: '#d5dec8',
+            },
+            sand: {
+              100: '#efe6dc',
+              800: '#4a3525',
             }
           }
         }
       }
     };
   </script>
-  <style>
-    body {
-      background-color: #F7F8F5;
-      color: #182921;
-      font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3, h4, .font-display {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .arrow-link:hover .arrow-icon {
-      transform: translate(2px, -2px);
-    }
-    .arrow-icon {
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      display: inline-block;
-    }
-  </style>
-</head>
-<body class="bg-brand-bg text-brand-forest selection:bg-brand-lime selection:text-brand-forest">
 
-  <!-- ==================== HEADER / NAVBAR ==================== -->
-  <header class="sticky top-0 z-40 bg-brand-bg/90 backdrop-blur-md border-b border-transparent transition-colors duration-200" id="navbar">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#" class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-brand-forest flex items-start">
-        GBR’s Serviços Digitais<span class="text-[10px] font-semibold ml-0.5 mt-0.5">®</span>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="selection:bg-[#d7f466] selection:text-[#13221c]">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#f7f8f4]/90 backdrop-blur-md border-b border-black/[0.04]">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="text-lg font-extrabold tracking-tight text-[#13221c] flex items-start">
+        GBR's Serviços Digitais
+        <span class="text-[10px] font-semibold ml-0.5 mt-0.5 text-[#13221c]/60">®</span>
       </a>
 
-      <!-- Center Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-forest/85">
-        <a href="#servicos" class="hover:text-brand-forest transition-colors">Serviços</a>
-        <a href="#como-funciona" class="hover:text-brand-forest transition-colors">Como funciona</a>
-        <a href="#projetos" class="hover:text-brand-forest transition-colors">Projetos</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#13221c]/75">
+        <a href="#servicos" class="hover:text-[#13221c] transition-colors">Serviços</a>
+        <a href="#como-funciona" class="hover:text-[#13221c] transition-colors">Como funciona</a>
+        <a href="#projetos" class="hover:text-[#13221c] transition-colors">Projetos</a>
       </nav>
 
-      <!-- Right CTA Button -->
-      <div class="flex items-center gap-3">
-        <button
-          onclick="openQuoteModal('Geral')"
-          class="arrow-link inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-forestHover text-white text-xs sm:text-sm font-medium px-5 py-2.5 rounded-full transition-all shadow-sm hover:shadow cursor-pointer"
-        >
-          <span>Vamos conversar</span>
-          <span class="arrow-icon text-xs">↗</span>
-        </button>
-      </div>
+      <button
+        type="button"
+        data-open-modal
+        class="group inline-flex items-center gap-2.5 bg-[#13221c] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-[#1e352c] transition-colors"
+      >
+        <span>Vamos conversar</span>
+        <span class="pill-arrow text-[#d7f466]">↗</span>
+      </button>
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="pt-10 pb-16 sm:pt-16 sm:pb-24">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-        
-        <!-- Left Column -->
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-lime text-brand-forest text-[11px] font-display font-bold tracking-wider uppercase">
-            PRESENÇA DIGITAL. CRESCIMENTO REAL.
-          </div>
-
-          <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-[56px] leading-[1.06] tracking-tight text-brand-forest">
-            Seu negócio merece<br class="hidden sm:inline" /> ser encontrado.
-          </h1>
-
-          <p class="text-brand-muted text-base sm:text-lg leading-relaxed max-w-lg">
-            Do Google Maps ao seu próprio site: eu ajudo sua empresa a aparecer, transmitir confiança e conquistar novas oportunidades.
-          </p>
-
-          <!-- Buttons Row -->
-          <div class="pt-1 flex flex-wrap items-center gap-5 sm:gap-6">
-            <button
-              onclick="openQuoteModal('Geral')"
-              class="arrow-link inline-flex items-center gap-2.5 bg-brand-forest hover:bg-brand-forestHover text-white text-sm font-medium px-6 py-3.5 rounded-full transition-all shadow-sm hover:shadow-md cursor-pointer"
-            >
-              <span>Quero destacar meu negócio</span>
-              <span class="arrow-icon">↗</span>
-            </button>
-
-            <a
-              href="#servicos"
-              class="inline-flex items-center gap-1.5 text-sm font-medium text-brand-forest hover:text-brand-muted transition-colors py-2"
-            >
-              <span>Conheça os serviços</span>
-              <span class="text-xs">↓</span>
-            </a>
-          </div>
-
-          <p class="text-xs text-brand-muted/85 pt-1">
-            Para autônomos, comércios e pequenos negócios.
-          </p>
+  <!-- HERO SECTION -->
+  <section class="pt-12 pb-20 md:pt-16 md:pb-24">
+    <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Coluna Esquerda -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center bg-[#d7f466] text-[#13221c] text-[10px] font-extrabold tracking-wider uppercase px-3 py-1 rounded-full">
+          Presença digital. Crescimento real.
         </div>
 
-        <!-- Right Column (Browser & Google Business Profile Mockup Frame) -->
-        <div class="lg:col-span-6">
-          <div class="bg-brand-sage rounded-3xl p-4 sm:p-6 shadow-sm border border-black/[0.03]">
-            <!-- Browser Window Card -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-black/[0.04]">
-              <!-- Browser Top Bar -->
-              <div class="px-4 py-2.5 bg-[#F4F6F0] border-b border-black/[0.05] flex items-center gap-3">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#D1D6C9]"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#D1D6C9]"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-[#D1D6C9]"></span>
-                </div>
-                <div class="text-[11px] text-brand-muted font-medium tracking-tight">
-                  seunegocio.com.br
-                </div>
-              </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.06] text-[#13221c]">
+          Seu negócio<br />
+          merece<br />
+          ser encontrado.
+        </h1>
 
-              <!-- Dark Green Website Preview Card -->
-              <div class="p-3 sm:p-4 bg-white">
-                <div class="bg-brand-forest rounded-xl p-6 sm:p-7 text-white relative overflow-hidden">
-                  <div class="text-[10px] font-display font-bold tracking-widest uppercase text-brand-lime mb-3">
-                    STUDIO BOTÂNICA
-                  </div>
-                  <h2 class="font-display font-bold text-2xl sm:text-3xl leading-tight mb-2.5">
-                    Mais verde.<br />Mais vida.
-                  </h2>
-                  <p class="text-xs sm:text-sm text-white/75 mb-5 max-w-xs">
-                    Paisagismo feito para transformar seu espaço.
-                  </p>
-                  <button
-                    onclick="openQuoteModal('Criação de Site Profissional')"
-                    class="arrow-link inline-flex items-center gap-1.5 bg-brand-lime hover:bg-brand-limeHover text-brand-forest text-xs font-semibold px-4 py-2 rounded-full transition-colors cursor-pointer"
-                  >
-                    <span>Conheça nosso trabalho</span>
-                    <span class="arrow-icon">↗</span>
-                  </button>
-                </div>
-              </div>
-            </div>
+        <p class="text-base sm:text-lg text-[#13221c]/70 leading-relaxed max-w-md">
+          Do Google Maps ao seu próprio site: eu ajudo sua empresa a aparecer, transmitir confiança e conquistar novas oportunidades.
+        </p>
 
-            <!-- White Google Business Profile Card Below -->
-            <div class="mt-3.5 bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-black/[0.04]">
-              <div class="text-[11px] font-medium text-brand-muted mb-3">
-                Seu negócio no Google
-              </div>
+        <div class="pt-2 flex flex-wrap items-center gap-5">
+          <button
+            type="button"
+            data-open-modal
+            class="group inline-flex items-center gap-3 bg-[#13221c] text-white text-sm font-semibold px-6 py-3.5 rounded-full hover:bg-[#1e352c] transition-colors"
+          >
+            <span>Quero destacar meu negócio</span>
+            <span class="pill-arrow text-[#d7f466]">↗</span>
+          </button>
 
-              <div class="flex items-start gap-3.5">
-                <!-- Square Avatar B -->
-                <div class="w-11 h-11 rounded-xl bg-brand-sageLight text-brand-forest font-display font-bold text-lg flex items-center justify-center shrink-0">
-                  B
-                </div>
-                <div class="min-w-0 flex-1">
-                  <div class="font-display font-bold text-base text-brand-forest leading-snug">
-                    Studio Botânica
-                  </div>
-                  <div class="text-xs text-brand-muted mt-0.5">
-                    Paisagismo · Sua cidade
-                  </div>
-                  <div class="text-[11px] text-brand-muted/90 mt-1">
-                    <span class="text-emerald-700 font-medium">Aberto</span> · Conheça os serviços
-                  </div>
-                </div>
-              </div>
-
-              <!-- 3 Small Pill Buttons -->
-              <div class="mt-4 pt-3 border-t border-black/[0.05] flex flex-wrap gap-2">
-                <button
-                  onclick="openQuoteModal('Perfil da Empresa no Google')"
-                  class="arrow-link inline-flex items-center gap-1 bg-brand-bg hover:bg-brand-sageLight text-brand-forest text-[11px] font-medium px-3 py-1.5 rounded-full border border-black/[0.06] transition-colors cursor-pointer"
-                >
-                  <span>Site</span>
-                  <span class="arrow-icon text-[10px]">↗</span>
-                </button>
-                <button
-                  onclick="openQuoteModal('Perfil da Empresa no Google')"
-                  class="arrow-link inline-flex items-center gap-1 bg-brand-bg hover:bg-brand-sageLight text-brand-forest text-[11px] font-medium px-3 py-1.5 rounded-full border border-black/[0.06] transition-colors cursor-pointer"
-                >
-                  <span>Como chegar</span>
-                  <span class="arrow-icon text-[10px]">↗</span>
-                </button>
-                <button
-                  onclick="openQuoteModal('Perfil da Empresa no Google')"
-                  class="arrow-link inline-flex items-center gap-1 bg-brand-bg hover:bg-brand-sageLight text-brand-forest text-[11px] font-medium px-3 py-1.5 rounded-full border border-black/[0.06] transition-colors cursor-pointer"
-                >
-                  <span>Contato</span>
-                  <span class="arrow-icon text-[10px]">↗</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Caption at bottom of container -->
-            <div class="mt-3.5 text-[10px] font-display font-semibold tracking-wider uppercase text-brand-muted/90 px-1">
-              EXEMPLOS ILUSTRATIVOS · A SUA MARCA, EM DESTAQUE
-            </div>
-          </div>
+          <a
+            href="#servicos"
+            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#13221c]/80 hover:text-[#13221c] transition-colors"
+          >
+            <span>Conheça os serviços</span>
+            <span>↓</span>
+          </a>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== DARK VALUE PROPOSITION STRIP ==================== -->
-  <section class="bg-brand-forest text-white py-6 sm:py-7">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
-        <div class="flex items-center gap-3">
-          <span class="font-display font-bold text-xs text-brand-lime">01</span>
-          <span class="text-sm font-medium text-white/95">Seja encontrado na sua região</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="font-display font-bold text-xs text-brand-lime">02</span>
-          <span class="text-sm font-medium text-white/95">Transmita mais confiança</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="font-display font-bold text-xs text-brand-lime">03</span>
-          <span class="text-sm font-medium text-white/95">Facilite o primeiro contato</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== SECTION 01 — SOLUÇÕES ==================== -->
-  <section id="servicos" class="py-20 sm:py-28">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <!-- Eyebrow -->
-      <div class="text-[11px] font-display font-bold tracking-wider uppercase text-brand-muted mb-3">
-        01 / SOLUÇÕES PARA O SEU NEGÓCIO
-      </div>
-
-      <!-- Header Row -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-        <h2 class="font-display font-bold text-3xl sm:text-4xl leading-tight tracking-tight text-brand-forest max-w-md">
-          Uma presença digital que trabalha por você.
-        </h2>
-        <p class="text-sm text-brand-muted max-w-xs leading-relaxed">
-          Escolha por onde começar.<br />Eu cuido dos próximos passos.
+        <p class="text-xs text-[#13221c]/50 pt-1">
+          Para autônomos, comércios e pequenos negócios.
         </p>
       </div>
 
-      <!-- 3-Column Card Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Card 1 (Highlighted Soft Sage) -->
-        <div class="bg-brand-sage rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs font-display font-semibold text-brand-muted">01</span>
-              <button onclick="openQuoteModal('Perfil da Empresa no Google')" aria-label="Selecionar Perfil no Google" class="text-brand-forest hover:opacity-70 transition-opacity cursor-pointer">
-                ↗
-              </button>
+      <!-- Coluna Direita: Mockup Ilustrativo -->
+      <div class="lg:col-span-6">
+        <div class="bg-[#e5eadc] rounded-3xl p-4 sm:p-5 border border-black/[0.04]">
+          <!-- Janela Browser Simulada -->
+          <div class="bg-[#13221c] rounded-2xl overflow-hidden shadow-sm">
+            <div class="bg-[#f2f4ee] px-4 py-2.5 flex items-center gap-2 border-b border-black/[0.05]">
+              <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
+              <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
+              <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
+              <span class="ml-2 text-[11px] font-medium text-[#13221c]/50">seunegocio.com.br</span>
             </div>
 
-            <h3 class="font-display font-bold text-xl text-brand-forest leading-snug mb-3">
-              Perfil da Empresa<br />no Google
-            </h3>
-
-            <p class="text-sm text-brand-muted leading-relaxed mb-6">
-              Coloque sua empresa no mapa e ajude as pessoas a encontrar o que você oferece.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-[13px] text-brand-forest/90 mb-8">
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Criação ou configuração do perfil</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Informações, horários e serviços</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Orientação para a verificação</span>
-              </li>
-            </ul>
+            <div class="p-6 sm:p-8 text-white space-y-4">
+              <span class="block text-[10px] font-bold tracking-widest uppercase text-[#d7f466]">
+                Studio Botânica
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+                Mais verde.<br />
+                Mais vida.
+              </h2>
+              <p class="text-xs sm:text-sm text-white/75">
+                Paisagismo feito para transformar seu espaço.
+              </p>
+              <div class="pt-1">
+                <span class="inline-flex items-center gap-2 bg-[#d7f466] text-[#13221c] text-xs font-bold px-4 py-2 rounded-full">
+                  Conheça nosso trabalho <span>↗</span>
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div class="pt-4 border-t border-black/[0.08]">
-            <button
-              onclick="openQuoteModal('Perfil da Empresa no Google')"
-              class="arrow-link inline-flex items-center gap-1.5 text-xs sm:text-sm font-display font-bold text-brand-forest cursor-pointer"
-            >
-              <span>Quero aparecer no Google</span>
-              <span class="arrow-icon">↗</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 2 (White Card) -->
-        <div class="bg-white rounded-2xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs font-display font-semibold text-brand-muted">02</span>
-              <button onclick="openQuoteModal('Criação de Site Profissional')" aria-label="Selecionar Criação de sites" class="text-brand-forest hover:opacity-70 transition-opacity cursor-pointer">
-                ↗
-              </button>
+          <!-- Card Google Perfil Simulado -->
+          <div class="mt-3.5 bg-white rounded-2xl p-4 sm:p-5 border border-black/[0.04]">
+            <p class="text-[11px] font-medium text-[#13221c]/50 mb-3">Seu negócio no Google</p>
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-[#eff2e8] flex items-center justify-center font-extrabold text-base text-[#13221c] shrink-0">
+                B
+              </div>
+              <div class="space-y-1">
+                <h3 class="text-sm font-bold text-[#13221c]">Studio Botânica</h3>
+                <p class="text-xs text-[#13221c]/60">Paisagismo · Sua cidade</p>
+                <p class="text-[11px] font-medium text-emerald-700">Aberto · Conheça os serviços</p>
+              </div>
             </div>
 
-            <h3 class="font-display font-bold text-xl text-brand-forest leading-snug mb-3">
-              Criação de sites<br />profissionais
-            </h3>
-
-            <p class="text-sm text-brand-muted leading-relaxed mb-6">
-              Um endereço digital com a sua identidade, pensado para apresentar e vender seu trabalho.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-[13px] text-brand-forest/90 mb-8">
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Layout adaptado ao celular</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Páginas de serviços e contato</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Estrutura básica para buscadores</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-4 border-t border-brand-border">
-            <button
-              onclick="openQuoteModal('Criação de Site Profissional')"
-              class="arrow-link inline-flex items-center gap-1.5 text-xs sm:text-sm font-display font-bold text-brand-forest cursor-pointer"
-            >
-              <span>Quero meu próprio site</span>
-              <span class="arrow-icon">↗</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 3 (White Card) -->
-        <div class="bg-white rounded-2xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs font-display font-semibold text-brand-muted">03</span>
-              <button onclick="openQuoteModal('Manutenção e Suporte')" aria-label="Selecionar Manutenção e Suporte" class="text-brand-forest hover:opacity-70 transition-opacity cursor-pointer">
-                ↗
-              </button>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80">Site ↗</span>
+              <span class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80">Como chegar ↗</span>
+              <span class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80">Contato ↗</span>
             </div>
-
-            <h3 class="font-display font-bold text-xl text-brand-forest leading-snug mb-3">
-              Sua presença<br />sempre em dia
-            </h3>
-
-            <p class="text-sm text-brand-muted leading-relaxed mb-6">
-              Mantenha suas informações organizadas e sua comunicação pronta para novos clientes.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-[13px] text-brand-forest/90 mb-8">
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Atualização de conteúdo</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Ajustes no site e no perfil</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-brand-forest font-bold">✓</span>
-                <span>Suporte conforme sua necessidade</span>
-              </li>
-            </ul>
           </div>
 
-          <div class="pt-4 border-t border-brand-border">
-            <button
-              onclick="openQuoteModal('Manutenção e Suporte')"
-              class="arrow-link inline-flex items-center gap-1.5 text-xs sm:text-sm font-display font-bold text-brand-forest cursor-pointer"
-            >
-              <span>Preciso de uma mão</span>
-              <span class="arrow-icon">↗</span>
-            </button>
-          </div>
+          <p class="mt-3 text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 px-1">
+            Exemplos ilustrativos · A sua marca, em destaque
+          </p>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- FAIXA DE DESTAQUES -->
+  <div class="bg-[#13221c] text-white py-5">
+    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+      <div class="flex items-center gap-3">
+        <span class="text-[#d7f466] font-bold">01</span>
+        <span class="font-medium text-white/90">Seja encontrado na sua região</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-[#d7f466] font-bold">02</span>
+        <span class="font-medium text-white/90">Transmita mais confiança</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-[#d7f466] font-bold">03</span>
+        <span class="font-medium text-white/90">Facilite o primeiro contato</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 / SOLUÇÕES PARA O SEU NEGÓCIO -->
+  <section id="servicos" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div class="space-y-3">
+          <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
+            01 / Soluções para o seu negócio
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
+            Uma presença digital<br />
+            que trabalha por você.
+          </h2>
+        </div>
+        <p class="text-sm text-[#13221c]/65 max-w-xs">
+          Escolha por onde começar.<br />
+          Eu cuido dos próximos passos.
+        </p>
       </div>
 
-      <!-- Footnote -->
-      <p class="mt-6 text-xs text-brand-muted/85">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 01 -->
+        <div class="card-hover bg-[#e5eadc] rounded-3xl p-7 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6">
+              <span>01</span>
+              <span>↗</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
+              Perfil da Empresa<br />no Google
+            </h3>
+            <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
+              Coloque sua empresa no mapa e ajude as pessoas a encontrar o que você oferece.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Criação ou configuração do perfil</li>
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Informações, horários e serviços</li>
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Orientação para a verificação</li>
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            data-open-modal
+            data-servico="Perfil da Empresa no Google"
+            class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
+          >
+            <span>Quero aparecer no Google</span>
+            <span class="pill-arrow">↗</span>
+          </button>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="card-hover bg-[#eff2e8] rounded-3xl p-7 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6">
+              <span>02</span>
+              <span>↗</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
+              Criação de sites<br />profissionais
+            </h3>
+            <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
+              Um endereço digital com a sua identidade, pensado para apresentar e vender seu trabalho.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Layout adaptado ao celular</li>
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Páginas de serviços e contato</li>
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Estrutura básica para buscadores</li>
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            data-open-modal
+            data-servico="Criação de site profissional"
+            class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
+          >
+            <span>Quero meu próprio site</span>
+            <span class="pill-arrow">↗</span>
+          </button>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="card-hover bg-white rounded-3xl p-7 sm:p-8 border border-black/[0.06] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6">
+              <span>03</span>
+              <span>↗</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
+              Sua presença<br />sempre em dia
+            </h3>
+            <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
+              Mantenha suas informações organizadas e sua comunicação pronta para novos clientes.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Atualização de conteúdo</li>
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Ajustes no site e no perfil</li>
+              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Suporte conforme sua necessidade</li>
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            data-open-modal
+            data-servico="Manutenção e suporte contínuo"
+            class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
+          >
+            <span>Preciso de uma mão</span>
+            <span class="pill-arrow">↗</span>
+          </button>
+        </div>
+      </div>
+
+      <p class="mt-6 text-xs text-[#13221c]/50">
         O perfil no Google é gratuito. O serviço contratado é de configuração e suporte; a verificação depende do Google.
       </p>
     </div>
   </section>
 
-  <!-- ==================== SECTION 02 — PROCESSO ==================== -->
-  <section id="como-funciona" class="bg-brand-sageLight py-20 sm:py-28">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="text-[11px] font-display font-bold tracking-wider uppercase text-brand-muted mb-3">
-        02 / SIMPLES DO COMEÇO AO FIM
+  <!-- 02 / SIMPLES DO COMEÇO AO FIM -->
+  <section id="como-funciona" class="bg-[#eff2e8] py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="space-y-3 mb-14">
+        <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
+          02 / Simples do começo ao fim
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
+          Você cuida do negócio.<br />
+          Eu cuido do digital.
+        </h2>
       </div>
 
-      <h2 class="font-display font-bold text-3xl sm:text-4xl leading-tight tracking-tight text-brand-forest max-w-md mb-14">
-        Você cuida do negócio.<br />Eu cuido do digital.
-      </h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-7">
-        <!-- Step 01 -->
-        <div>
-          <div class="font-display font-medium text-3xl sm:text-4xl text-[#98A692] mb-3">01</div>
-          <h3 class="font-display font-bold text-base text-brand-forest mb-2">A gente conversa</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="space-y-3">
+          <span class="block text-3xl font-light text-[#13221c]/35">01</span>
+          <h3 class="text-base font-bold text-[#13221c]">A gente conversa</h3>
+          <p class="text-sm text-[#13221c]/65 leading-relaxed">
             Você me conta sobre seu negócio, seu momento e o que precisa.
           </p>
         </div>
 
-        <!-- Step 02 -->
-        <div>
-          <div class="font-display font-medium text-3xl sm:text-4xl text-[#98A692] mb-3">02</div>
-          <h3 class="font-display font-bold text-base text-brand-forest mb-2">Você recebe uma proposta</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">
+        <div class="space-y-3">
+          <span class="block text-3xl font-light text-[#13221c]/35">02</span>
+          <h3 class="text-base font-bold text-[#13221c]">Você recebe uma proposta</h3>
+          <p class="text-sm text-[#13221c]/65 leading-relaxed">
             Escopo, prazo e investimento definidos antes de começar.
           </p>
         </div>
 
-        <!-- Step 03 -->
-        <div>
-          <div class="font-display font-medium text-3xl sm:text-4xl text-[#98A692] mb-3">03</div>
-          <h3 class="font-display font-bold text-base text-brand-forest mb-2">Eu coloco a mão na massa</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">
+        <div class="space-y-3">
+          <span class="block text-3xl font-light text-[#13221c]/35">03</span>
+          <h3 class="text-base font-bold text-[#13221c]">Eu coloco a mão na massa</h3>
+          <p class="text-sm text-[#13221c]/65 leading-relaxed">
             Você acompanha a criação e aprova os detalhes do projeto.
           </p>
         </div>
 
-        <!-- Step 04 -->
-        <div>
-          <div class="font-display font-medium text-3xl sm:text-4xl text-[#98A692] mb-3">04</div>
-          <h3 class="font-display font-bold text-base text-brand-forest mb-2">Tudo pronto para começar</h3>
-          <p class="text-sm text-brand-muted leading-relaxed">
+        <div class="space-y-3">
+          <span class="block text-3xl font-light text-[#13221c]/35">04</span>
+          <h3 class="text-base font-bold text-[#13221c]">Tudo pronto para começar</h3>
+          <p class="text-sm text-[#13221c]/65 leading-relaxed">
             Entrega com orientação para usar e manter sua presença digital.
           </p>
         </div>
@@ -462,400 +363,322 @@
     </div>
   </section>
 
-  <!-- ==================== SECTION 03 — POSSIBILIDADES / PROJETOS ==================== -->
-  <section id="projetos" class="py-20 sm:py-28">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="text-[11px] font-display font-bold tracking-wider uppercase text-brand-muted mb-3">
-        03 / POSSIBILIDADES PARA A SUA MARCA
+  <!-- 03 / POSSIBILIDADES PARA A SUA MARCA -->
+  <section id="projetos" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="space-y-3 mb-12">
+        <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
+          03 / Possibilidades para a sua marca
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
+          Pequenos negócios.<br />
+          Grandes primeiras impressões.
+        </h2>
+        <p class="text-sm text-[#13221c]/65">
+          Conceitos ilustrativos para imaginar como a sua empresa pode aparecer.
+        </p>
       </div>
 
-      <h2 class="font-display font-bold text-3xl sm:text-4xl leading-tight tracking-tight text-brand-forest max-w-lg mb-3">
-        Pequenos negócios.<br />Grandes primeiras impressões.
-      </h2>
-
-      <p class="text-sm sm:text-base text-brand-muted mb-12">
-        Conceitos ilustrativos para imaginar como a sua empresa pode aparecer.
-      </p>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
-        
-        <!-- Left Showcase Card -->
-        <div class="bg-brand-sage rounded-3xl p-5 sm:p-7 flex flex-col justify-between">
-          <!-- Inner Warm Beige Website Mockup -->
-          <div class="bg-[#F2ECE4] rounded-2xl p-7 sm:p-9 text-[#4A3525] shadow-sm">
-            <div class="text-[10px] font-display font-bold tracking-widest uppercase text-[#7A614D] mb-3">
-              FORMA / ARQUITETURA
-            </div>
-            <h3 class="font-display font-bold text-2xl sm:text-3xl leading-tight mb-3 text-[#4A3525]">
-              Espaços para<br />viver melhor.
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Conceito 1 -->
+        <div class="card-hover bg-[#eff2e8] rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div class="bg-[#efe6dc] rounded-2xl p-6 sm:p-8 mb-6 space-y-3">
+            <span class="block text-[10px] font-bold tracking-widest uppercase text-[#4a3525]/60">
+              Forma / Arquitetura
+            </span>
+            <h3 class="text-2xl font-extrabold text-[#4a3525] leading-tight">
+              Espaços para<br />
+              viver melhor.
             </h3>
-            <p class="text-xs sm:text-sm text-[#6B5442] mb-6 max-w-xs leading-relaxed">
+            <p class="text-xs text-[#4a3525]/75">
               Projetos com propósito. Do primeiro traço ao seu novo lugar.
             </p>
-            <button
-              onclick="openQuoteModal('Criação de Site Profissional')"
-              class="arrow-link inline-flex items-center gap-1.5 bg-[#4A3525] hover:bg-[#38271B] text-[#F2ECE4] text-xs font-medium px-4 py-2.5 rounded-full transition-colors cursor-pointer"
-            >
-              <span>Vamos projetar juntos</span>
-              <span class="arrow-icon">↗</span>
-            </button>
+            <div class="pt-2">
+              <span class="inline-flex items-center gap-1.5 bg-[#4a3525] text-white text-[11px] font-semibold px-4 py-2 rounded-full">
+                Vamos projetar juntos ↗
+              </span>
+            </div>
           </div>
 
-          <div class="mt-6 px-1">
-            <h4 class="font-display font-bold text-base sm:text-lg text-brand-forest">
-              Um site com a essência do seu trabalho
-            </h4>
-            <p class="text-[10px] font-display font-semibold tracking-wider uppercase text-brand-muted mt-1">
-              SITE INSTITUCIONAL · CONCEITO ILUSTRATIVO
+          <div>
+            <h4 class="text-base font-bold text-[#13221c]">Um site com a essência do seu trabalho</h4>
+            <p class="text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 mt-1">
+              Site institucional · Conceito ilustrativo
             </p>
           </div>
         </div>
 
-        <!-- Right Showcase Card -->
-        <div class="bg-brand-sage rounded-3xl p-5 sm:p-7 flex flex-col justify-between">
-          <!-- Inner Crisp White Google Search/Maps Card -->
-          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm">
-            <div class="text-[10px] font-display font-bold tracking-widest uppercase text-brand-muted mb-2">
-              ENCONTRE PERTO DE VOCÊ
+        <!-- Conceito 2 -->
+        <div class="card-hover bg-[#e5eadc] rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div class="bg-white rounded-2xl p-6 sm:p-8 mb-6 border border-black/[0.04]">
+            <span class="block text-[10px] font-bold tracking-widest uppercase text-[#13221c]/45 mb-2">
+              Encontre perto de você
+            </span>
+            <h3 class="text-2xl font-extrabold text-[#13221c]">Café da Vila</h3>
+            <p class="text-xs text-[#13221c]/65 mt-1">Cafeteria · Café fresco e boas conversas.</p>
+
+            <div class="mt-4 bg-[#f7f8f4] rounded-xl p-3.5 grid grid-cols-2 gap-2 text-[11px] text-[#13221c]/75">
+              <span>Horários atualizados</span>
+              <span>Site e contato</span>
+              <span>Serviços organizados</span>
+              <span>Localização correta</span>
             </div>
-            <h3 class="font-display font-bold text-2xl text-brand-forest mb-1">
-              Café da Vila
-            </h3>
-            <p class="text-xs sm:text-sm text-brand-muted mb-5">
-              Cafeteria · Café fresco e boas conversas.
+
+            <p class="mt-4 text-xs font-bold text-[#13221c]">
+              Sua próxima visita começa na busca. ↗
             </p>
-
-            <!-- Tinted Info Strip -->
-            <div class="bg-[#F3F5EE] rounded-xl p-4 grid grid-cols-2 gap-3 text-xs text-brand-forest/85 mb-5">
-              <div class="space-y-1">
-                <div>Horários atualizados</div>
-                <div>Serviços organizados</div>
-              </div>
-              <div class="space-y-1">
-                <div>Site e contato</div>
-                <div>Localização correta</div>
-              </div>
-            </div>
-
-            <button
-              onclick="openQuoteModal('Perfil da Empresa no Google')"
-              class="arrow-link inline-flex items-center gap-1.5 text-xs font-display font-bold text-brand-forest cursor-pointer"
-            >
-              <span>Sua próxima visita começa na busca.</span>
-              <span class="arrow-icon">↗</span>
-            </button>
           </div>
 
-          <div class="mt-6 px-1">
-            <h4 class="font-display font-bold text-base sm:text-lg text-brand-forest">
-              A sua empresa mais fácil de encontrar
-            </h4>
-            <p class="text-[10px] font-display font-semibold tracking-wider uppercase text-brand-muted mt-1">
-              GOOGLE MAPS · CONCEITO ILUSTRATIVO
+          <div>
+            <h4 class="text-base font-bold text-[#13221c]">A sua empresa mais fácil de encontrar</h4>
+            <p class="text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 mt-1">
+              Google Maps · Conceito ilustrativo
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ==================== SECTION 04 — FAQ ==================== -->
-  <section class="py-20 sm:py-28 border-t border-brand-border/60">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10">
-        
-        <!-- Left Sticky Column -->
-        <div class="lg:col-span-5 lg:sticky lg:top-28 self-start">
-          <div class="text-[11px] font-display font-bold tracking-wider uppercase text-brand-muted mb-3">
-            04 / TIRE SUAS DÚVIDAS
-          </div>
-          <h2 class="font-display font-bold text-3xl sm:text-4xl leading-tight tracking-tight text-brand-forest mb-4">
-            Antes de dar<br />o próximo passo.
-          </h2>
-          <p class="text-sm sm:text-base text-brand-muted max-w-xs leading-relaxed">
-            Tudo começa com uma conversa, sem complicação.
+  <!-- 04 / TIRE SUAS DÚVIDAS -->
+  <section class="py-20 md:py-24 border-t border-black/[0.06]">
+    <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-5 space-y-3">
+        <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
+          04 / Tire suas dúvidas
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
+          Antes de dar<br />
+          o próximo passo.
+        </h2>
+        <p class="text-sm text-[#13221c]/65">
+          Tudo começa com uma conversa, sem complicação.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7 divide-y divide-black/10">
+        <div class="pb-6">
+          <h3 class="text-base font-bold text-[#13221c] mb-2">Quanto custa o serviço?</h3>
+          <p class="text-sm text-[#13221c]/70 leading-relaxed">
+            O investimento depende do que seu negócio precisa. Após a conversa inicial, você recebe uma proposta com escopo, prazo e valores.
           </p>
         </div>
 
-        <!-- Right Column (Divider-Separated FAQ List) -->
-        <div class="lg:col-span-7 divide-y divide-brand-border">
-          
-          <!-- FAQ 1 -->
-          <div class="pb-7">
-            <h3 class="font-display font-bold text-base sm:text-lg text-brand-forest mb-2">
-              Quanto custa o serviço?
-            </h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              O investimento depende do que seu negócio precisa. Após a conversa inicial, você recebe uma proposta com escopo, prazo e valores.
-            </p>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="py-7">
-            <h3 class="font-display font-bold text-base sm:text-lg text-brand-forest mb-2">
-              Em quanto tempo fica pronto?
-            </h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              O prazo é combinado na proposta e depende do projeto, do envio dos materiais e das etapas de aprovação.
-            </p>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="py-7">
-            <h3 class="font-display font-bold text-base sm:text-lg text-brand-forest mb-2">
-              Você garante a aprovação do perfil no Google?
-            </h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              Não. A verificação e a publicação seguem os critérios do Google. Eu ajudo na configuração e oriento você durante o processo.
-            </p>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="pt-7">
-            <h3 class="font-display font-bold text-base sm:text-lg text-brand-forest mb-2">
-              Já tenho site ou perfil. Você pode ajudar?
-            </h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              Sim. Podemos avaliar o que já existe e definir as atualizações e melhorias que fazem sentido para o seu negócio.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== BOTTOM CTA BANNER ==================== -->
-  <section class="bg-brand-forest text-white py-20 sm:py-24">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-10">
-        <div class="max-w-xl">
-          <div class="text-[11px] font-display font-bold tracking-wider uppercase text-brand-lime mb-3">
-            O PRÓXIMO PASSO É MAIS SIMPLES DO QUE PARECE.
-          </div>
-          <h2 class="font-display font-bold text-3xl sm:text-5xl leading-[1.1] tracking-tight text-white mb-4">
-            Vamos colocar seu negócio em destaque?
-          </h2>
-          <p class="text-sm sm:text-base text-white/75">
-            Conte o que você precisa. Eu ajudo a encontrar o melhor começo.
+        <div class="py-6">
+          <h3 class="text-base font-bold text-[#13221c] mb-2">Em quanto tempo fica pronto?</h3>
+          <p class="text-sm text-[#13221c]/70 leading-relaxed">
+            O prazo é combinado na proposta e depende do projeto, do envio dos materiais e das etapas de aprovação.
           </p>
         </div>
 
-        <div class="flex flex-col items-start lg:items-center shrink-0">
-          <button
-            onclick="openQuoteModal('Geral')"
-            class="arrow-link inline-flex items-center gap-3 bg-brand-lime hover:bg-brand-limeHover text-brand-forest font-display font-bold text-sm px-7 py-4 rounded-full transition-all shadow-md hover:shadow-lg cursor-pointer"
-          >
-            <span>Solicitar orçamento</span>
-            <span class="arrow-icon">↗</span>
-          </button>
-          <span class="text-[11px] text-white/50 mt-2.5">
-            Canal de contato a definir
-          </span>
+        <div class="py-6">
+          <h3 class="text-base font-bold text-[#13221c] mb-2">Você garante a aprovação do perfil no Google?</h3>
+          <p class="text-sm text-[#13221c]/70 leading-relaxed">
+            Não. A verificação e a publicação seguem os critérios do Google. Eu ajudo na configuração e oriento você durante o processo.
+          </p>
+        </div>
+
+        <div class="pt-6">
+          <h3 class="text-base font-bold text-[#13221c] mb-2">Já tenho site ou perfil. Você pode ajudar?</h3>
+          <p class="text-sm text-[#13221c]/70 leading-relaxed">
+            Sim. Podemos avaliar o que já existe e definir as atualizações e melhorias que fazem sentido para o seu negócio.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-brand-bg border-t border-brand-border py-8">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted">
-      <div class="font-display font-extrabold text-base text-brand-forest">
-        GBR’s
+  <!-- CTA FINAL -->
+  <section class="bg-[#13221c] text-white py-20 md:py-24">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <div class="space-y-3 max-w-xl">
+        <span class="block text-[10px] font-bold tracking-widest uppercase text-[#d7f466]">
+          O próximo passo é mais simples do que parece.
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+          Vamos colocar seu<br />
+          negócio em destaque?
+        </h2>
+        <p class="text-sm sm:text-base text-white/70">
+          Conte o que você precisa. Eu ajudo a encontrar o melhor começo.
+        </p>
       </div>
-      <div>
-        Presença digital para negócios reais.
+
+      <div class="flex flex-col items-start md:items-center gap-2 shrink-0">
+        <button
+          type="button"
+          data-open-modal
+          class="group inline-flex items-center gap-3 bg-[#d7f466] text-[#13221c] text-sm font-extrabold px-7 py-4 rounded-full hover:bg-[#c8ea4b] transition-colors"
+        >
+          <span>Solicitar orçamento</span>
+          <span class="pill-arrow">↗</span>
+        </button>
+        <span class="text-[11px] text-white/45">Atendimento direto com validação segura</span>
       </div>
-      <div class="flex items-center gap-2 font-medium text-brand-forest/80">
-        <a href="#servicos" class="hover:text-brand-forest transition-colors">Google Maps</a>
-        <span class="text-brand-muted/40">/</span>
-        <a href="#servicos" class="hover:text-brand-forest transition-colors">Sites</a>
-        <span class="text-brand-muted/40">/</span>
-        <a href="#servicos" class="hover:text-brand-forest transition-colors">Suporte</a>
-      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#f7f8f4] py-8 border-t border-black/[0.06]">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#13221c]/60">
+      <span class="text-base font-extrabold text-[#13221c]">GBR's</span>
+      <span>Presença digital para negócios reais.</span>
+      <span>Google Maps / Sites / Suporte</span>
     </div>
   </footer>
 
-  <!-- ==================== INTERACTIVE QUOTE / CONTACT MODAL ==================== -->
-  <div id="quoteModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-brand-forest/60 backdrop-blur-sm transition-opacity">
-    <div class="bg-brand-bg rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-brand-border relative animate-[fadeIn_0.2s_ease-out]">
-      <!-- Close Button -->
-      <button
-        onclick="closeQuoteModal()"
-        aria-label="Fechar janela"
-        class="absolute top-5 right-5 w-9 h-9 rounded-full bg-brand-sageLight hover:bg-brand-sage text-brand-forest flex items-center justify-center text-sm font-bold transition-colors cursor-pointer"
-      >
-        ✕
-      </button>
+  <!-- MODAL DE CONTATO PROTEGIDO COM FIREBASE -->
+  <div id="modal-contato" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div id="modal-overlay" class="fixed inset-0 bg-[#13221c]/70 backdrop-blur-sm"></div>
 
-      <!-- Form View -->
-      <div id="modalFormView">
-        <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand-lime text-brand-forest text-[10px] font-display font-bold tracking-wider uppercase mb-3">
-          ORÇAMENTO SEM COMPROMISSO
+    <div class="relative z-10 w-full max-w-lg bg-[#f7f8f4] rounded-3xl p-6 sm:p-8 shadow-2xl border border-black/10">
+      <div class="flex items-start justify-between gap-4 mb-6">
+        <div>
+          <span class="inline-block bg-[#d7f466] text-[#13221c] text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2">
+            Solicitar orçamento
+          </span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-[#13221c]">
+            Vamos conversar sobre o seu negócio
+          </h3>
         </div>
-        <h3 class="font-display font-bold text-2xl text-brand-forest mb-1.5">
-          Vamos conversar sobre o seu negócio
-        </h3>
-        <p class="text-xs sm:text-sm text-brand-muted mb-6">
-          Preencha os detalhes abaixo para receber uma proposta personalizada.
+
+        <button
+          id="btn-fechar-modal"
+          type="button"
+          class="w-9 h-9 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-[#13221c] font-bold"
+          aria-label="Fechar"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Mensagem de erro -->
+      <div id="feedback-erro" class="hidden mb-4 p-3.5 rounded-2xl bg-red-100 text-red-900 text-xs font-medium"></div>
+
+      <!-- ETAPA 1: AUTENTICAÇÃO ANTI-BOT -->
+      <div id="etapa-auth" class="space-y-4">
+        <p class="text-sm text-[#13221c]/75 leading-relaxed">
+          Para proteger seu atendimento contra robôs de spam e manter seus dados em sigilo, confirme sua conta Google antes de enviar a mensagem.
         </p>
 
-        <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+        <button
+          id="btn-login-google"
+          type="button"
+          class="w-full inline-flex items-center justify-center gap-3 bg-[#13221c] text-white text-sm font-semibold py-3.5 px-5 rounded-full hover:bg-[#1e352c] transition-colors"
+        >
+          Continuar com Google
+        </button>
+
+        <p class="text-[11px] text-[#13221c]/50 text-center">
+          Nenhum dado fica visível publicamente. Protegido por Firebase App Check.
+        </p>
+      </div>
+
+      <!-- ETAPA 2: FORMULÁRIO DE SOLICITAÇÃO -->
+      <form id="form-orcamento" class="hidden space-y-4">
+        <div class="flex items-center justify-between bg-[#eff2e8] px-4 py-2.5 rounded-2xl text-xs">
           <div>
-            <label for="serviceSelect" class="block text-xs font-display font-semibold text-brand-forest mb-1.5">
-              Qual solução você procura?
-            </label>
+            <span id="usuario-logado-nome" class="font-bold text-[#13221c] block"></span>
+            <span id="usuario-logado-email" class="text-[#13221c]/60"></span>
+          </div>
+          <button id="btn-trocar-conta" type="button" class="underline font-semibold text-[#13221c]/75 hover:text-[#13221c]">
+            Trocar conta
+          </button>
+        </div>
+
+        <div>
+          <label for="campo-empresa" class="block text-xs font-bold text-[#13221c] mb-1">Nome da empresa ou negócio *</label>
+          <input
+            id="campo-empresa"
+            type="text"
+            required
+            maxlength="120"
+            placeholder="Ex.: Studio Botânica"
+            class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+          />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <label for="campo-servico" class="block text-xs font-bold text-[#13221c] mb-1">O que você precisa?</label>
             <select
-              id="serviceSelect"
-              class="w-full bg-white border border-brand-border rounded-xl px-3.5 py-2.5 text-sm text-brand-forest focus:outline-none focus:ring-2 focus:ring-brand-forest"
+              id="campo-servico"
+              class="w-full rounded-xl border border-black/15 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
             >
               <option value="Perfil da Empresa no Google">Perfil da Empresa no Google</option>
-              <option value="Criação de Site Profissional">Criação de Site Profissional</option>
-              <option value="Manutenção e Suporte">Manutenção e Suporte</option>
-              <option value="Pacote Completo (Google + Site)">Pacote Completo (Google + Site)</option>
+              <option value="Criação de site profissional">Criação de site profissional</option>
+              <option value="Manutenção e suporte contínuo">Manutenção e suporte contínuo</option>
+              <option value="Combo: Google + Site">Combo: Google + Site</option>
             </select>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label for="businessName" class="block text-xs font-display font-semibold text-brand-forest mb-1.5">
-                Nome do negócio
-              </label>
-              <input
-                type="text"
-                id="businessName"
-                required
-                placeholder="Ex: Café da Vila"
-                class="w-full bg-white border border-brand-border rounded-xl px-3.5 py-2.5 text-sm text-brand-forest placeholder:text-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-forest"
-              />
-            </div>
-
-            <div>
-              <label for="whatsappInput" class="block text-xs font-display font-semibold text-brand-forest mb-1.5">
-                WhatsApp para contato
-              </label>
-              <input
-                type="tel"
-                id="whatsappInput"
-                required
-                placeholder="(11) 99999-9999"
-                class="w-full bg-white border border-brand-border rounded-xl px-3.5 py-2.5 text-sm text-brand-forest placeholder:text-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-forest"
-              />
-            </div>
-          </div>
-
           <div>
-            <label for="messageInput" class="block text-xs font-display font-semibold text-brand-forest mb-1.5">
-              Conte um pouco sobre o seu momento
-            </label>
-            <textarea
-              id="messageInput"
-              rows="3"
-              placeholder="Ex: Ainda não apareço no Google Maps e gostaria de atrair mais clientes da minha região..."
-              class="w-full bg-white border border-brand-border rounded-xl px-3.5 py-2.5 text-sm text-brand-forest placeholder:text-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-forest resize-none"
-            ></textarea>
+            <label for="campo-canal" class="block text-xs font-bold text-[#13221c] mb-1">Como prefere receber retorno?</label>
+            <select
+              id="campo-canal"
+              class="w-full rounded-xl border border-black/15 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+            >
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="E-mail">E-mail</option>
+              <option value="Ligação">Ligação</option>
+            </select>
           </div>
+        </div>
 
-          <button
-            type="submit"
-            class="arrow-link w-full inline-flex items-center justify-center gap-2 bg-brand-forest hover:bg-brand-forestHover text-white font-display font-semibold text-sm py-3.5 rounded-full transition-colors cursor-pointer mt-2"
-          >
-            <span>Enviar solicitação</span>
-            <span class="arrow-icon">↗</span>
-          </button>
-        </form>
-      </div>
+        <div>
+          <label for="campo-contato" class="block text-xs font-bold text-[#13221c] mb-1">Seu WhatsApp ou telefone (opcional se preferir e-mail)</label>
+          <input
+            id="campo-contato"
+            type="text"
+            maxlength="60"
+            placeholder="(15) 99999-9999"
+            class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+          />
+        </div>
 
-      <!-- Confirmation View -->
-      <div id="modalSuccessView" class="hidden text-center py-6 space-y-4">
-        <div class="w-14 h-14 rounded-2xl bg-brand-lime text-brand-forest font-bold text-2xl flex items-center justify-center mx-auto">
+        <div>
+          <label for="campo-mensagem" class="block text-xs font-bold text-[#13221c] mb-1">Conte brevemente sobre o seu negócio *</label>
+          <textarea
+            id="campo-mensagem"
+            rows="3"
+            required
+            minlength="10"
+            maxlength="2000"
+            placeholder="Ex.: Tenho uma cafeteria e quero organizar nosso perfil no Google Maps e criar um site simples."
+            class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+          ></textarea>
+        </div>
+
+        <button
+          id="btn-submit-orcamento"
+          type="submit"
+          class="w-full bg-[#13221c] text-white text-sm font-bold py-3.5 px-6 rounded-full hover:bg-[#1e352c] transition-colors"
+        >
+          Enviar solicitação ↗
+        </button>
+      </form>
+
+      <!-- ETAPA 3: CONFIRMAÇÃO -->
+      <div id="etapa-sucesso" class="hidden text-center py-6 space-y-4">
+        <div class="w-12 h-12 rounded-full bg-[#d7f466] text-[#13221c] font-extrabold text-xl flex items-center justify-center mx-auto">
           ✓
         </div>
-        <h3 class="font-display font-bold text-2xl text-brand-forest">
-          Solicitação registrada!
-        </h3>
-        <p class="text-sm text-brand-muted max-w-sm mx-auto leading-relaxed" id="confirmationSummary">
-          Obrigado pelo interesse! Em breve entraremos em contato para conversar sobre o seu projeto.
+        <h4 class="text-xl font-extrabold text-[#13221c]">Solicitação enviada!</h4>
+        <p class="text-sm text-[#13221c]/70 max-w-sm mx-auto">
+          Recebemos suas informações com segurança. Em breve a equipe da GBR's entra em contato pelo canal escolhido.
         </p>
-        <div class="pt-3">
-          <button
-            onclick="closeQuoteModal()"
-            class="inline-flex items-center justify-center bg-brand-forest text-white text-xs font-display font-semibold px-6 py-3 rounded-full hover:bg-brand-forestHover transition-colors cursor-pointer"
-          >
-            Voltar para a página
-          </button>
-        </div>
+        <button
+          id="btn-novo-envio"
+          type="button"
+          class="text-xs font-bold underline text-[#13221c]/70 hover:text-[#13221c]"
+        >
+          Enviar outra mensagem
+        </button>
       </div>
     </div>
   </div>
 
-  <script>
-    const modal = document.getElementById('quoteModal');
-    const serviceSelect = document.getElementById('serviceSelect');
-    const formView = document.getElementById('modalFormView');
-    const successView = document.getElementById('modalSuccessView');
-    const quoteForm = document.getElementById('quoteForm');
-    const confirmationSummary = document.getElementById('confirmationSummary');
-
-    function openQuoteModal(selectedService) {
-      formView.classList.remove('hidden');
-      successView.classList.add('hidden');
-
-      if (selectedService && selectedService !== 'Geral') {
-        serviceSelect.value = selectedService;
-      } else {
-        serviceSelect.value = 'Pacote Completo (Google + Site)';
-      }
-
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeQuoteModal() {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = '';
-    }
-
-    function handleQuoteSubmit(e) {
-      e.preventDefault();
-      const business = document.getElementById('businessName').value.trim();
-      const service = serviceSelect.value;
-
-      confirmationSummary.innerHTML = `Recebemos os dados de <strong class="text-brand-forest">${business}</strong> para <strong class="text-brand-forest">${service}</strong>. Vamos analisar seu momento e responder em breve.`;
-
-      formView.classList.add('hidden');
-      successView.classList.remove('hidden');
-      quoteForm.reset();
-    }
-
-    // Close modal when clicking outside dialog
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeQuoteModal();
-      }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeQuoteModal();
-      }
-    });
-
-    // Add subtle navbar border on scroll
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 12) {
-        navbar.classList.add('border-brand-border');
-        navbar.classList.remove('border-transparent');
-      } else {
-        navbar.classList.remove('border-brand-border');
-        navbar.classList.add('border-transparent');
-      }
-    });
-  </script>
+  <!-- Script principal como ES Module -->
+  <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>
