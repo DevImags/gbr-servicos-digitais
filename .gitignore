@@ -1,0 +1,12 @@
+# Arquivos de ambiente e chaves privadas
+.env
+.env.*
+*.local
+serviceAccountKey.json
+firebase-debug.log
+firestore-debug.log
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
