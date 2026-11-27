@@ -10,3 +10,6 @@ firestore-debug.log
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Dependências locais do Node
+node_modules/

@@ -1,686 +1,909 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GBR's Serviços Digitais — Presença digital para negócios reais</title>
-  <meta name="description" content="Do Google Maps ao seu próprio site: ajudamos sua empresa a aparecer, transmitir confiança e conquistar novas oportunidades." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      GBR's Serviços Digitais — Presença digital para negócios reais
+    </title>
+    <meta
+      name="description"
+      content="Do Google Maps ao seu próprio site: ajudamos sua empresa a aparecer, transmitir confiança e conquistar novas oportunidades."
+    />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2313221c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='800' fill='%23d7f466'%3EG%3C/text%3E%3C/svg%3E" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2313221c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='800' fill='%23d7f466'%3EG%3C/text%3E%3C/svg%3E"
+    />
 
-  <!-- Google Fonts: Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            forest: {
-              950: '#13221c',
-              900: '#192b24',
-              800: '#243c32',
-            },
-            limebrand: {
-              300: '#d7f466',
-              400: '#c8ea4b',
-            },
-            sage: {
-              50: '#f7f8f4',
-              100: '#eff2e8',
-              200: '#e5eadc',
-              300: '#d5dec8',
-            },
-            sand: {
-              100: '#efe6dc',
-              800: '#4a3525',
-            }
-          }
-        }
-      }
-    };
-  </script>
-
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-<body class="selection:bg-[#d7f466] selection:text-[#13221c]">
-
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-40 bg-[#f7f8f4]/90 backdrop-blur-md border-b border-black/[0.04]">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-lg font-extrabold tracking-tight text-[#13221c] flex items-start">
-        GBR's Serviços Digitais
-        <span class="text-[10px] font-semibold ml-0.5 mt-0.5 text-[#13221c]/60">®</span>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#13221c]/75">
-        <a href="#servicos" class="hover:text-[#13221c] transition-colors">Serviços</a>
-        <a href="#como-funciona" class="hover:text-[#13221c] transition-colors">Como funciona</a>
-        <a href="#projetos" class="hover:text-[#13221c] transition-colors">Projetos</a>
-      </nav>
-
-      <button
-        type="button"
-        data-open-modal
-        class="group inline-flex items-center gap-2.5 bg-[#13221c] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-[#1e352c] transition-colors"
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="selection:bg-[#d7f466] selection:text-[#13221c]">
+    <!-- NAVBAR -->
+    <header
+      class="sticky top-0 z-40 bg-[#f7f8f4]/90 backdrop-blur-md border-b border-black/[0.04]"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between"
       >
-        <span>Vamos conversar</span>
-        <span class="pill-arrow text-[#d7f466]">↗</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="pt-12 pb-20 md:pt-16 md:pb-24">
-    <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-
-      <!-- Coluna Esquerda -->
-      <div class="lg:col-span-6 space-y-6">
-        <div class="inline-flex items-center bg-[#d7f466] text-[#13221c] text-[10px] font-extrabold tracking-wider uppercase px-3 py-1 rounded-full">
-          Presença digital. Crescimento real.
-        </div>
-
-        <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.06] text-[#13221c]">
-          Seu negócio<br />
-          merece<br />
-          ser encontrado.
-        </h1>
-
-        <p class="text-base sm:text-lg text-[#13221c]/70 leading-relaxed max-w-md">
-          Do Google Maps ao seu próprio site: eu ajudo sua empresa a aparecer, transmitir confiança e conquistar novas oportunidades.
-        </p>
-
-        <div class="pt-2 flex flex-wrap items-center gap-5">
-          <button
-            type="button"
-            data-open-modal
-            class="group inline-flex items-center gap-3 bg-[#13221c] text-white text-sm font-semibold px-6 py-3.5 rounded-full hover:bg-[#1e352c] transition-colors"
+        <a
+          href="#"
+          class="text-lg font-extrabold tracking-tight text-[#13221c] flex items-start"
+        >
+          GBR's Serviços Digitais
+          <span
+            class="text-[10px] font-semibold ml-0.5 mt-0.5 text-[#13221c]/60"
+            >®</span
           >
-            <span>Quero destacar meu negócio</span>
-            <span class="pill-arrow text-[#d7f466]">↗</span>
-          </button>
+        </a>
 
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-[#13221c]/75"
+        >
+          <a href="#servicos" class="hover:text-[#13221c] transition-colors"
+            >Serviços</a
+          >
           <a
-            href="#servicos"
-            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#13221c]/80 hover:text-[#13221c] transition-colors"
+            href="#como-funciona"
+            class="hover:text-[#13221c] transition-colors"
+            >Como funciona</a
           >
-            <span>Conheça os serviços</span>
-            <span>↓</span>
-          </a>
-        </div>
-
-        <p class="text-xs text-[#13221c]/50 pt-1">
-          Para autônomos, comércios e pequenos negócios.
-        </p>
-      </div>
-
-      <!-- Coluna Direita: Mockup Ilustrativo -->
-      <div class="lg:col-span-6">
-        <div class="bg-[#e5eadc] rounded-3xl p-4 sm:p-5 border border-black/[0.04]">
-          <!-- Janela Browser Simulada -->
-          <div class="bg-[#13221c] rounded-2xl overflow-hidden shadow-sm">
-            <div class="bg-[#f2f4ee] px-4 py-2.5 flex items-center gap-2 border-b border-black/[0.05]">
-              <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
-              <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
-              <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
-              <span class="ml-2 text-[11px] font-medium text-[#13221c]/50">seunegocio.com.br</span>
-            </div>
-
-            <div class="p-6 sm:p-8 text-white space-y-4">
-              <span class="block text-[10px] font-bold tracking-widest uppercase text-[#d7f466]">
-                Studio Botânica
-              </span>
-              <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
-                Mais verde.<br />
-                Mais vida.
-              </h2>
-              <p class="text-xs sm:text-sm text-white/75">
-                Paisagismo feito para transformar seu espaço.
-              </p>
-              <div class="pt-1">
-                <span class="inline-flex items-center gap-2 bg-[#d7f466] text-[#13221c] text-xs font-bold px-4 py-2 rounded-full">
-                  Conheça nosso trabalho <span>↗</span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card Google Perfil Simulado -->
-          <div class="mt-3.5 bg-white rounded-2xl p-4 sm:p-5 border border-black/[0.04]">
-            <p class="text-[11px] font-medium text-[#13221c]/50 mb-3">Seu negócio no Google</p>
-            <div class="flex items-start gap-3.5">
-              <div class="w-11 h-11 rounded-xl bg-[#eff2e8] flex items-center justify-center font-extrabold text-base text-[#13221c] shrink-0">
-                B
-              </div>
-              <div class="space-y-1">
-                <h3 class="text-sm font-bold text-[#13221c]">Studio Botânica</h3>
-                <p class="text-xs text-[#13221c]/60">Paisagismo · Sua cidade</p>
-                <p class="text-[11px] font-medium text-emerald-700">Aberto · Conheça os serviços</p>
-              </div>
-            </div>
-
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80">Site ↗</span>
-              <span class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80">Como chegar ↗</span>
-              <span class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80">Contato ↗</span>
-            </div>
-          </div>
-
-          <p class="mt-3 text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 px-1">
-            Exemplos ilustrativos · A sua marca, em destaque
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAIXA DE DESTAQUES -->
-  <div class="bg-[#13221c] text-white py-5">
-    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-3 gap-4 text-xs sm:text-sm">
-      <div class="flex items-center gap-3">
-        <span class="text-[#d7f466] font-bold">01</span>
-        <span class="font-medium text-white/90">Seja encontrado na sua região</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="text-[#d7f466] font-bold">02</span>
-        <span class="font-medium text-white/90">Transmita mais confiança</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="text-[#d7f466] font-bold">03</span>
-        <span class="font-medium text-white/90">Facilite o primeiro contato</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 01 / SOLUÇÕES PARA O SEU NEGÓCIO -->
-  <section id="servicos" class="py-20 md:py-28">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-        <div class="space-y-3">
-          <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
-            01 / Soluções para o seu negócio
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
-            Uma presença digital<br />
-            que trabalha por você.
-          </h2>
-        </div>
-        <p class="text-sm text-[#13221c]/65 max-w-xs">
-          Escolha por onde começar.<br />
-          Eu cuido dos próximos passos.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Card 01 -->
-        <div class="card-hover bg-[#e5eadc] rounded-3xl p-7 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6">
-              <span>01</span>
-              <span>↗</span>
-            </div>
-            <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
-              Perfil da Empresa<br />no Google
-            </h3>
-            <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
-              Coloque sua empresa no mapa e ajude as pessoas a encontrar o que você oferece.
-            </p>
-            <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Criação ou configuração do perfil</li>
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Informações, horários e serviços</li>
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Orientação para a verificação</li>
-            </ul>
-          </div>
-
-          <button
-            type="button"
-            data-open-modal
-            data-servico="Perfil da Empresa no Google"
-            class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
+          <a href="#projetos" class="hover:text-[#13221c] transition-colors"
+            >Projetos</a
           >
-            <span>Quero aparecer no Google</span>
-            <span class="pill-arrow">↗</span>
-          </button>
-        </div>
+        </nav>
 
-        <!-- Card 02 -->
-        <div class="card-hover bg-[#eff2e8] rounded-3xl p-7 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6">
-              <span>02</span>
-              <span>↗</span>
-            </div>
-            <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
-              Criação de sites<br />profissionais
-            </h3>
-            <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
-              Um endereço digital com a sua identidade, pensado para apresentar e vender seu trabalho.
-            </p>
-            <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Layout adaptado ao celular</li>
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Páginas de serviços e contato</li>
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Estrutura básica para buscadores</li>
-            </ul>
-          </div>
-
-          <button
-            type="button"
-            data-open-modal
-            data-servico="Criação de site profissional"
-            class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
-          >
-            <span>Quero meu próprio site</span>
-            <span class="pill-arrow">↗</span>
-          </button>
-        </div>
-
-        <!-- Card 03 -->
-        <div class="card-hover bg-white rounded-3xl p-7 sm:p-8 border border-black/[0.06] flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6">
-              <span>03</span>
-              <span>↗</span>
-            </div>
-            <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
-              Sua presença<br />sempre em dia
-            </h3>
-            <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
-              Mantenha suas informações organizadas e sua comunicação pronta para novos clientes.
-            </p>
-            <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Atualização de conteúdo</li>
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Ajustes no site e no perfil</li>
-              <li class="flex items-center gap-2"><span class="text-[#13221c]">✓</span> Suporte conforme sua necessidade</li>
-            </ul>
-          </div>
-
-          <button
-            type="button"
-            data-open-modal
-            data-servico="Manutenção e suporte contínuo"
-            class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
-          >
-            <span>Preciso de uma mão</span>
-            <span class="pill-arrow">↗</span>
-          </button>
-        </div>
-      </div>
-
-      <p class="mt-6 text-xs text-[#13221c]/50">
-        O perfil no Google é gratuito. O serviço contratado é de configuração e suporte; a verificação depende do Google.
-      </p>
-    </div>
-  </section>
-
-  <!-- 02 / SIMPLES DO COMEÇO AO FIM -->
-  <section id="como-funciona" class="bg-[#eff2e8] py-20 md:py-28">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="space-y-3 mb-14">
-        <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
-          02 / Simples do começo ao fim
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
-          Você cuida do negócio.<br />
-          Eu cuido do digital.
-        </h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="space-y-3">
-          <span class="block text-3xl font-light text-[#13221c]/35">01</span>
-          <h3 class="text-base font-bold text-[#13221c]">A gente conversa</h3>
-          <p class="text-sm text-[#13221c]/65 leading-relaxed">
-            Você me conta sobre seu negócio, seu momento e o que precisa.
-          </p>
-        </div>
-
-        <div class="space-y-3">
-          <span class="block text-3xl font-light text-[#13221c]/35">02</span>
-          <h3 class="text-base font-bold text-[#13221c]">Você recebe uma proposta</h3>
-          <p class="text-sm text-[#13221c]/65 leading-relaxed">
-            Escopo, prazo e investimento definidos antes de começar.
-          </p>
-        </div>
-
-        <div class="space-y-3">
-          <span class="block text-3xl font-light text-[#13221c]/35">03</span>
-          <h3 class="text-base font-bold text-[#13221c]">Eu coloco a mão na massa</h3>
-          <p class="text-sm text-[#13221c]/65 leading-relaxed">
-            Você acompanha a criação e aprova os detalhes do projeto.
-          </p>
-        </div>
-
-        <div class="space-y-3">
-          <span class="block text-3xl font-light text-[#13221c]/35">04</span>
-          <h3 class="text-base font-bold text-[#13221c]">Tudo pronto para começar</h3>
-          <p class="text-sm text-[#13221c]/65 leading-relaxed">
-            Entrega com orientação para usar e manter sua presença digital.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03 / POSSIBILIDADES PARA A SUA MARCA -->
-  <section id="projetos" class="py-20 md:py-28">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="space-y-3 mb-12">
-        <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
-          03 / Possibilidades para a sua marca
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
-          Pequenos negócios.<br />
-          Grandes primeiras impressões.
-        </h2>
-        <p class="text-sm text-[#13221c]/65">
-          Conceitos ilustrativos para imaginar como a sua empresa pode aparecer.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Conceito 1 -->
-        <div class="card-hover bg-[#eff2e8] rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
-          <div class="bg-[#efe6dc] rounded-2xl p-6 sm:p-8 mb-6 space-y-3">
-            <span class="block text-[10px] font-bold tracking-widest uppercase text-[#4a3525]/60">
-              Forma / Arquitetura
-            </span>
-            <h3 class="text-2xl font-extrabold text-[#4a3525] leading-tight">
-              Espaços para<br />
-              viver melhor.
-            </h3>
-            <p class="text-xs text-[#4a3525]/75">
-              Projetos com propósito. Do primeiro traço ao seu novo lugar.
-            </p>
-            <div class="pt-2">
-              <span class="inline-flex items-center gap-1.5 bg-[#4a3525] text-white text-[11px] font-semibold px-4 py-2 rounded-full">
-                Vamos projetar juntos ↗
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-base font-bold text-[#13221c]">Um site com a essência do seu trabalho</h4>
-            <p class="text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 mt-1">
-              Site institucional · Conceito ilustrativo
-            </p>
-          </div>
-        </div>
-
-        <!-- Conceito 2 -->
-        <div class="card-hover bg-[#e5eadc] rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
-          <div class="bg-white rounded-2xl p-6 sm:p-8 mb-6 border border-black/[0.04]">
-            <span class="block text-[10px] font-bold tracking-widest uppercase text-[#13221c]/45 mb-2">
-              Encontre perto de você
-            </span>
-            <h3 class="text-2xl font-extrabold text-[#13221c]">Café da Vila</h3>
-            <p class="text-xs text-[#13221c]/65 mt-1">Cafeteria · Café fresco e boas conversas.</p>
-
-            <div class="mt-4 bg-[#f7f8f4] rounded-xl p-3.5 grid grid-cols-2 gap-2 text-[11px] text-[#13221c]/75">
-              <span>Horários atualizados</span>
-              <span>Site e contato</span>
-              <span>Serviços organizados</span>
-              <span>Localização correta</span>
-            </div>
-
-            <p class="mt-4 text-xs font-bold text-[#13221c]">
-              Sua próxima visita começa na busca. ↗
-            </p>
-          </div>
-
-          <div>
-            <h4 class="text-base font-bold text-[#13221c]">A sua empresa mais fácil de encontrar</h4>
-            <p class="text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 mt-1">
-              Google Maps · Conceito ilustrativo
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 / TIRE SUAS DÚVIDAS -->
-  <section class="py-20 md:py-24 border-t border-black/[0.06]">
-    <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12">
-      <div class="lg:col-span-5 space-y-3">
-        <span class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50">
-          04 / Tire suas dúvidas
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight">
-          Antes de dar<br />
-          o próximo passo.
-        </h2>
-        <p class="text-sm text-[#13221c]/65">
-          Tudo começa com uma conversa, sem complicação.
-        </p>
-      </div>
-
-      <div class="lg:col-span-7 divide-y divide-black/10">
-        <div class="pb-6">
-          <h3 class="text-base font-bold text-[#13221c] mb-2">Quanto custa o serviço?</h3>
-          <p class="text-sm text-[#13221c]/70 leading-relaxed">
-            O investimento depende do que seu negócio precisa. Após a conversa inicial, você recebe uma proposta com escopo, prazo e valores.
-          </p>
-        </div>
-
-        <div class="py-6">
-          <h3 class="text-base font-bold text-[#13221c] mb-2">Em quanto tempo fica pronto?</h3>
-          <p class="text-sm text-[#13221c]/70 leading-relaxed">
-            O prazo é combinado na proposta e depende do projeto, do envio dos materiais e das etapas de aprovação.
-          </p>
-        </div>
-
-        <div class="py-6">
-          <h3 class="text-base font-bold text-[#13221c] mb-2">Você garante a aprovação do perfil no Google?</h3>
-          <p class="text-sm text-[#13221c]/70 leading-relaxed">
-            Não. A verificação e a publicação seguem os critérios do Google. Eu ajudo na configuração e oriento você durante o processo.
-          </p>
-        </div>
-
-        <div class="pt-6">
-          <h3 class="text-base font-bold text-[#13221c] mb-2">Já tenho site ou perfil. Você pode ajudar?</h3>
-          <p class="text-sm text-[#13221c]/70 leading-relaxed">
-            Sim. Podemos avaliar o que já existe e definir as atualizações e melhorias que fazem sentido para o seu negócio.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="bg-[#13221c] text-white py-20 md:py-24">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-8">
-      <div class="space-y-3 max-w-xl">
-        <span class="block text-[10px] font-bold tracking-widest uppercase text-[#d7f466]">
-          O próximo passo é mais simples do que parece.
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-          Vamos colocar seu<br />
-          negócio em destaque?
-        </h2>
-        <p class="text-sm sm:text-base text-white/70">
-          Conte o que você precisa. Eu ajudo a encontrar o melhor começo.
-        </p>
-      </div>
-
-      <div class="flex flex-col items-start md:items-center gap-2 shrink-0">
         <button
           type="button"
           data-open-modal
-          class="group inline-flex items-center gap-3 bg-[#d7f466] text-[#13221c] text-sm font-extrabold px-7 py-4 rounded-full hover:bg-[#c8ea4b] transition-colors"
+          class="group inline-flex items-center gap-2.5 bg-[#13221c] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-[#1e352c] transition-colors"
         >
-          <span>Solicitar orçamento</span>
-          <span class="pill-arrow">↗</span>
+          <span>Vamos conversar</span>
+          <span class="pill-arrow text-[#d7f466]">↗</span>
         </button>
-        <span class="text-[11px] text-white/45">Atendimento direto com validação segura</span>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#f7f8f4] py-8 border-t border-black/[0.06]">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#13221c]/60">
-      <span class="text-base font-extrabold text-[#13221c]">GBR's</span>
-      <span>Presença digital para negócios reais.</span>
-      <span>Google Maps / Sites / Suporte</span>
-    </div>
-  </footer>
+    <!-- HERO SECTION -->
+    <section class="pt-12 pb-20 md:pt-16 md:pb-24">
+      <div
+        class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center"
+      >
+        <!-- Coluna Esquerda -->
+        <div class="lg:col-span-6 space-y-6">
+          <div
+            class="inline-flex items-center bg-[#d7f466] text-[#13221c] text-[10px] font-extrabold tracking-wider uppercase px-3 py-1 rounded-full"
+          >
+            Presença digital. Crescimento real.
+          </div>
 
-  <!-- MODAL DE CONTATO PROTEGIDO COM FIREBASE -->
-  <div id="modal-contato" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
-    <div id="modal-overlay" class="fixed inset-0 bg-[#13221c]/70 backdrop-blur-sm"></div>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.06] text-[#13221c]"
+          >
+            Seu negócio<br />
+            merece<br />
+            ser encontrado.
+          </h1>
 
-    <div class="relative z-10 w-full max-w-lg bg-[#f7f8f4] rounded-3xl p-6 sm:p-8 shadow-2xl border border-black/10">
-      <div class="flex items-start justify-between gap-4 mb-6">
-        <div>
-          <span class="inline-block bg-[#d7f466] text-[#13221c] text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2">
-            Solicitar orçamento
-          </span>
-          <h3 class="text-xl sm:text-2xl font-extrabold text-[#13221c]">
-            Vamos conversar sobre o seu negócio
-          </h3>
+          <p
+            class="text-base sm:text-lg text-[#13221c]/70 leading-relaxed max-w-md"
+          >
+            Do Google Maps ao seu próprio site: eu ajudo sua empresa a aparecer,
+            transmitir confiança e conquistar novas oportunidades.
+          </p>
+
+          <div class="pt-2 flex flex-wrap items-center gap-5">
+            <button
+              type="button"
+              data-open-modal
+              class="group inline-flex items-center gap-3 bg-[#13221c] text-white text-sm font-semibold px-6 py-3.5 rounded-full hover:bg-[#1e352c] transition-colors"
+            >
+              <span>Quero destacar meu negócio</span>
+              <span class="pill-arrow text-[#d7f466]">↗</span>
+            </button>
+
+            <a
+              href="#servicos"
+              class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#13221c]/80 hover:text-[#13221c] transition-colors"
+            >
+              <span>Conheça os serviços</span>
+              <span>↓</span>
+            </a>
+          </div>
+
+          <p class="text-xs text-[#13221c]/50 pt-1">
+            Para autônomos, comércios e pequenos negócios.
+          </p>
         </div>
 
-        <button
-          id="btn-fechar-modal"
-          type="button"
-          class="w-9 h-9 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-[#13221c] font-bold"
-          aria-label="Fechar"
-        >
-          ✕
-        </button>
-      </div>
+        <!-- Coluna Direita: Mockup Ilustrativo -->
+        <div class="lg:col-span-6">
+          <div
+            class="bg-[#e5eadc] rounded-3xl p-4 sm:p-5 border border-black/[0.04]"
+          >
+            <!-- Janela Browser Simulada -->
+            <div class="bg-[#13221c] rounded-2xl overflow-hidden shadow-sm">
+              <div
+                class="bg-[#f2f4ee] px-4 py-2.5 flex items-center gap-2 border-b border-black/[0.05]"
+              >
+                <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
+                <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
+                <span class="w-2 h-2 rounded-full bg-[#13221c]/20"></span>
+                <span class="ml-2 text-[11px] font-medium text-[#13221c]/50"
+                  >seunegocio.com.br</span
+                >
+              </div>
 
-      <!-- Mensagem de erro -->
-      <div id="feedback-erro" class="hidden mb-4 p-3.5 rounded-2xl bg-red-100 text-red-900 text-xs font-medium"></div>
+              <div class="p-6 sm:p-8 text-white space-y-4">
+                <span
+                  class="block text-[10px] font-bold tracking-widest uppercase text-[#d7f466]"
+                >
+                  Studio Botânica
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+                  Mais verde.<br />
+                  Mais vida.
+                </h2>
+                <p class="text-xs sm:text-sm text-white/75">
+                  Paisagismo feito para transformar seu espaço.
+                </p>
+                <div class="pt-1">
+                  <span
+                    class="inline-flex items-center gap-2 bg-[#d7f466] text-[#13221c] text-xs font-bold px-4 py-2 rounded-full"
+                  >
+                    Conheça nosso trabalho <span>↗</span>
+                  </span>
+                </div>
+              </div>
+            </div>
 
-      <!-- ETAPA 1: AUTENTICAÇÃO ANTI-BOT -->
-      <div id="etapa-auth" class="space-y-4">
-        <p class="text-sm text-[#13221c]/75 leading-relaxed">
-          Para proteger seu atendimento contra robôs de spam e manter seus dados em sigilo, confirme sua conta Google antes de enviar a mensagem.
-        </p>
+            <!-- Card Google Perfil Simulado -->
+            <div
+              class="mt-3.5 bg-white rounded-2xl p-4 sm:p-5 border border-black/[0.04]"
+            >
+              <p class="text-[11px] font-medium text-[#13221c]/50 mb-3">
+                Seu negócio no Google
+              </p>
+              <div class="flex items-start gap-3.5">
+                <div
+                  class="w-11 h-11 rounded-xl bg-[#eff2e8] flex items-center justify-center font-extrabold text-base text-[#13221c] shrink-0"
+                >
+                  B
+                </div>
+                <div class="space-y-1">
+                  <h3 class="text-sm font-bold text-[#13221c]">
+                    Studio Botânica
+                  </h3>
+                  <p class="text-xs text-[#13221c]/60">
+                    Paisagismo · Sua cidade
+                  </p>
+                  <p class="text-[11px] font-medium text-emerald-700">
+                    Aberto · Conheça os serviços
+                  </p>
+                </div>
+              </div>
 
-        <button
-          id="btn-login-google"
-          type="button"
-          class="w-full inline-flex items-center justify-center gap-3 bg-[#13221c] text-white text-sm font-semibold py-3.5 px-5 rounded-full hover:bg-[#1e352c] transition-colors"
-        >
-          Continuar com Google
-        </button>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80"
+                  >Site ↗</span
+                >
+                <span
+                  class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80"
+                  >Como chegar ↗</span
+                >
+                <span
+                  class="text-[11px] font-semibold bg-[#f7f8f4] border border-black/[0.06] px-3 py-1 rounded-full text-[#13221c]/80"
+                  >Contato ↗</span
+                >
+              </div>
+            </div>
 
-        <p class="text-[11px] text-[#13221c]/50 text-center">
-          Nenhum dado fica visível publicamente. Protegido por Firebase App Check.
-        </p>
-      </div>
-
-      <!-- ETAPA 2: FORMULÁRIO DE SOLICITAÇÃO -->
-      <form id="form-orcamento" class="hidden space-y-4">
-        <div class="flex items-center justify-between bg-[#eff2e8] px-4 py-2.5 rounded-2xl text-xs">
-          <div>
-            <span id="usuario-logado-nome" class="font-bold text-[#13221c] block"></span>
-            <span id="usuario-logado-email" class="text-[#13221c]/60"></span>
+            <p
+              class="mt-3 text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 px-1"
+            >
+              Exemplos ilustrativos · A sua marca, em destaque
+            </p>
           </div>
-          <button id="btn-trocar-conta" type="button" class="underline font-semibold text-[#13221c]/75 hover:text-[#13221c]">
-            Trocar conta
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE DESTAQUES -->
+    <div class="bg-[#13221c] text-white py-5">
+      <div
+        class="max-w-6xl mx-auto px-6 grid sm:grid-cols-3 gap-4 text-xs sm:text-sm"
+      >
+        <div class="flex items-center gap-3">
+          <span class="text-[#d7f466] font-bold">01</span>
+          <span class="font-medium text-white/90"
+            >Seja encontrado na sua região</span
+          >
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-[#d7f466] font-bold">02</span>
+          <span class="font-medium text-white/90"
+            >Transmita mais confiança</span
+          >
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-[#d7f466] font-bold">03</span>
+          <span class="font-medium text-white/90"
+            >Facilite o primeiro contato</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- 01 / SOLUÇÕES PARA O SEU NEGÓCIO -->
+    <section id="servicos" class="py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
+        >
+          <div class="space-y-3">
+            <span
+              class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50"
+            >
+              01 / Soluções para o seu negócio
+            </span>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight"
+            >
+              Uma presença digital<br />
+              que trabalha por você.
+            </h2>
+          </div>
+          <p class="text-sm text-[#13221c]/65 max-w-xs">
+            Escolha por onde começar.<br />
+            Eu cuido dos próximos passos.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 01 -->
+          <div
+            class="card-hover bg-[#e5eadc] rounded-3xl p-7 sm:p-8 flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6"
+              >
+                <span>01</span>
+                <span>↗</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
+                Perfil da Empresa<br />no Google
+              </h3>
+              <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
+                Coloque sua empresa no mapa e ajude as pessoas a encontrar o que
+                você oferece.
+              </p>
+              <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Criação ou configuração
+                  do perfil
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Informações, horários e
+                  serviços
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Orientação para a
+                  verificação
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-open-modal
+              data-servico="Perfil da Empresa no Google"
+              class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
+            >
+              <span>Quero aparecer no Google</span>
+              <span class="pill-arrow">↗</span>
+            </button>
+          </div>
+
+          <!-- Card 02 -->
+          <div
+            class="card-hover bg-[#eff2e8] rounded-3xl p-7 sm:p-8 flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6"
+              >
+                <span>02</span>
+                <span>↗</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
+                Criação de sites<br />profissionais
+              </h3>
+              <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
+                Um endereço digital com a sua identidade, pensado para
+                apresentar e vender seu trabalho.
+              </p>
+              <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Layout adaptado ao
+                  celular
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Páginas de serviços e
+                  contato
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Estrutura básica para
+                  buscadores
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-open-modal
+              data-servico="Criação de site profissional"
+              class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
+            >
+              <span>Quero meu próprio site</span>
+              <span class="pill-arrow">↗</span>
+            </button>
+          </div>
+
+          <!-- Card 03 -->
+          <div
+            class="card-hover bg-white rounded-3xl p-7 sm:p-8 border border-black/[0.06] flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="flex items-center justify-between text-xs font-bold text-[#13221c]/60 mb-6"
+              >
+                <span>03</span>
+                <span>↗</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-[#13221c] mb-3">
+                Sua presença<br />sempre em dia
+              </h3>
+              <p class="text-sm text-[#13221c]/70 leading-relaxed mb-6">
+                Mantenha suas informações organizadas e sua comunicação pronta
+                para novos clientes.
+              </p>
+              <ul class="space-y-2.5 text-xs sm:text-sm text-[#13221c]/80 mb-8">
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Atualização de conteúdo
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Ajustes no site e no
+                  perfil
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#13221c]">✓</span> Suporte conforme sua
+                  necessidade
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              data-open-modal
+              data-servico="Manutenção e suporte contínuo"
+              class="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#13221c] border-t border-black/10 pt-4 text-left"
+            >
+              <span>Preciso de uma mão</span>
+              <span class="pill-arrow">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <p class="mt-6 text-xs text-[#13221c]/50">
+          O perfil no Google é gratuito. O serviço contratado é de configuração
+          e suporte; a verificação depende do Google.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 / SIMPLES DO COMEÇO AO FIM -->
+    <section id="como-funciona" class="bg-[#eff2e8] py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="space-y-3 mb-14">
+          <span
+            class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50"
+          >
+            02 / Simples do começo ao fim
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight"
+          >
+            Você cuida do negócio.<br />
+            Eu cuido do digital.
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="space-y-3">
+            <span class="block text-3xl font-light text-[#13221c]/35">01</span>
+            <h3 class="text-base font-bold text-[#13221c]">A gente conversa</h3>
+            <p class="text-sm text-[#13221c]/65 leading-relaxed">
+              Você me conta sobre seu negócio, seu momento e o que precisa.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <span class="block text-3xl font-light text-[#13221c]/35">02</span>
+            <h3 class="text-base font-bold text-[#13221c]">
+              Você recebe uma proposta
+            </h3>
+            <p class="text-sm text-[#13221c]/65 leading-relaxed">
+              Escopo, prazo e investimento definidos antes de começar.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <span class="block text-3xl font-light text-[#13221c]/35">03</span>
+            <h3 class="text-base font-bold text-[#13221c]">
+              Eu coloco a mão na massa
+            </h3>
+            <p class="text-sm text-[#13221c]/65 leading-relaxed">
+              Você acompanha a criação e aprova os detalhes do projeto.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <span class="block text-3xl font-light text-[#13221c]/35">04</span>
+            <h3 class="text-base font-bold text-[#13221c]">
+              Tudo pronto para começar
+            </h3>
+            <p class="text-sm text-[#13221c]/65 leading-relaxed">
+              Entrega com orientação para usar e manter sua presença digital.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / POSSIBILIDADES PARA A SUA MARCA -->
+    <section id="projetos" class="py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="space-y-3 mb-12">
+          <span
+            class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50"
+          >
+            03 / Possibilidades para a sua marca
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight"
+          >
+            Pequenos negócios.<br />
+            Grandes primeiras impressões.
+          </h2>
+          <p class="text-sm text-[#13221c]/65">
+            Conceitos ilustrativos para imaginar como a sua empresa pode
+            aparecer.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Conceito 1 -->
+          <div
+            class="card-hover bg-[#eff2e8] rounded-3xl p-6 sm:p-8 flex flex-col justify-between"
+          >
+            <div class="bg-[#efe6dc] rounded-2xl p-6 sm:p-8 mb-6 space-y-3">
+              <span
+                class="block text-[10px] font-bold tracking-widest uppercase text-[#4a3525]/60"
+              >
+                Forma / Arquitetura
+              </span>
+              <h3 class="text-2xl font-extrabold text-[#4a3525] leading-tight">
+                Espaços para<br />
+                viver melhor.
+              </h3>
+              <p class="text-xs text-[#4a3525]/75">
+                Projetos com propósito. Do primeiro traço ao seu novo lugar.
+              </p>
+              <div class="pt-2">
+                <span
+                  class="inline-flex items-center gap-1.5 bg-[#4a3525] text-white text-[11px] font-semibold px-4 py-2 rounded-full"
+                >
+                  Vamos projetar juntos ↗
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-base font-bold text-[#13221c]">
+                Um site com a essência do seu trabalho
+              </h4>
+              <p
+                class="text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 mt-1"
+              >
+                Site institucional · Conceito ilustrativo
+              </p>
+            </div>
+          </div>
+
+          <!-- Conceito 2 -->
+          <div
+            class="card-hover bg-[#e5eadc] rounded-3xl p-6 sm:p-8 flex flex-col justify-between"
+          >
+            <div
+              class="bg-white rounded-2xl p-6 sm:p-8 mb-6 border border-black/[0.04]"
+            >
+              <span
+                class="block text-[10px] font-bold tracking-widest uppercase text-[#13221c]/45 mb-2"
+              >
+                Encontre perto de você
+              </span>
+              <h3 class="text-2xl font-extrabold text-[#13221c]">
+                Café da Vila
+              </h3>
+              <p class="text-xs text-[#13221c]/65 mt-1">
+                Cafeteria · Café fresco e boas conversas.
+              </p>
+
+              <div
+                class="mt-4 bg-[#f7f8f4] rounded-xl p-3.5 grid grid-cols-2 gap-2 text-[11px] text-[#13221c]/75"
+              >
+                <span>Horários atualizados</span>
+                <span>Site e contato</span>
+                <span>Serviços organizados</span>
+                <span>Localização correta</span>
+              </div>
+
+              <p class="mt-4 text-xs font-bold text-[#13221c]">
+                Sua próxima visita começa na busca. ↗
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-base font-bold text-[#13221c]">
+                A sua empresa mais fácil de encontrar
+              </h4>
+              <p
+                class="text-[10px] font-semibold tracking-wider uppercase text-[#13221c]/45 mt-1"
+              >
+                Google Maps · Conceito ilustrativo
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / TIRE SUAS DÚVIDAS -->
+    <section class="py-20 md:py-24 border-t border-black/[0.06]">
+      <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5 space-y-3">
+          <span
+            class="text-[11px] font-bold tracking-widest uppercase text-[#13221c]/50"
+          >
+            04 / Tire suas dúvidas
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#13221c] leading-tight"
+          >
+            Antes de dar<br />
+            o próximo passo.
+          </h2>
+          <p class="text-sm text-[#13221c]/65">
+            Tudo começa com uma conversa, sem complicação.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 divide-y divide-black/10">
+          <div class="pb-6">
+            <h3 class="text-base font-bold text-[#13221c] mb-2">
+              Quanto custa o serviço?
+            </h3>
+            <p class="text-sm text-[#13221c]/70 leading-relaxed">
+              O investimento depende do que seu negócio precisa. Após a conversa
+              inicial, você recebe uma proposta com escopo, prazo e valores.
+            </p>
+          </div>
+
+          <div class="py-6">
+            <h3 class="text-base font-bold text-[#13221c] mb-2">
+              Em quanto tempo fica pronto?
+            </h3>
+            <p class="text-sm text-[#13221c]/70 leading-relaxed">
+              O prazo é combinado na proposta e depende do projeto, do envio dos
+              materiais e das etapas de aprovação.
+            </p>
+          </div>
+
+          <div class="py-6">
+            <h3 class="text-base font-bold text-[#13221c] mb-2">
+              Você garante a aprovação do perfil no Google?
+            </h3>
+            <p class="text-sm text-[#13221c]/70 leading-relaxed">
+              Não. A verificação e a publicação seguem os critérios do Google.
+              Eu ajudo na configuração e oriento você durante o processo.
+            </p>
+          </div>
+
+          <div class="pt-6">
+            <h3 class="text-base font-bold text-[#13221c] mb-2">
+              Já tenho site ou perfil. Você pode ajudar?
+            </h3>
+            <p class="text-sm text-[#13221c]/70 leading-relaxed">
+              Sim. Podemos avaliar o que já existe e definir as atualizações e
+              melhorias que fazem sentido para o seu negócio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="bg-[#13221c] text-white py-20 md:py-24">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-8"
+      >
+        <div class="space-y-3 max-w-xl">
+          <span
+            class="block text-[10px] font-bold tracking-widest uppercase text-[#d7f466]"
+          >
+            O próximo passo é mais simples do que parece.
+          </span>
+          <h2
+            class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight"
+          >
+            Vamos colocar seu<br />
+            negócio em destaque?
+          </h2>
+          <p class="text-sm sm:text-base text-white/70">
+            Conte o que você precisa. Eu ajudo a encontrar o melhor começo.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-start md:items-center gap-2 shrink-0">
+          <button
+            type="button"
+            data-open-modal
+            class="group inline-flex items-center gap-3 bg-[#d7f466] text-[#13221c] text-sm font-extrabold px-7 py-4 rounded-full hover:bg-[#c8ea4b] transition-colors"
+          >
+            <span>Solicitar orçamento</span>
+            <span class="pill-arrow">↗</span>
+          </button>
+          <span class="text-[11px] text-white/45"
+            >Atendimento direto com validação segura</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#f7f8f4] py-8 border-t border-black/[0.06]">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#13221c]/60"
+      >
+        <span class="text-base font-extrabold text-[#13221c]">GBR's</span>
+        <span>Presença digital para negócios reais.</span>
+        <span>Google Maps / Sites / Suporte</span>
+      </div>
+    </footer>
+
+    <!-- MODAL DE CONTATO PROTEGIDO COM FIREBASE -->
+    <div
+      id="modal-contato"
+      class="fixed inset-0 z-50 hidden flex items-center justify-center p-4"
+    >
+      <div
+        id="modal-overlay"
+        class="fixed inset-0 bg-[#13221c]/70 backdrop-blur-sm"
+      ></div>
+
+      <div
+        class="relative z-10 w-full max-w-lg bg-[#f7f8f4] rounded-3xl p-6 sm:p-8 shadow-2xl border border-black/10"
+      >
+        <div class="flex items-start justify-between gap-4 mb-6">
+          <div>
+            <span
+              class="inline-block bg-[#d7f466] text-[#13221c] text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2"
+            >
+              Solicitar orçamento
+            </span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#13221c]">
+              Vamos conversar sobre o seu negócio
+            </h3>
+          </div>
+
+          <button
+            id="btn-fechar-modal"
+            type="button"
+            class="w-9 h-9 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-[#13221c] font-bold"
+            aria-label="Fechar"
+          >
+            ✕
           </button>
         </div>
 
-        <div>
-          <label for="campo-empresa" class="block text-xs font-bold text-[#13221c] mb-1">Nome da empresa ou negócio *</label>
-          <input
-            id="campo-empresa"
-            type="text"
-            required
-            maxlength="120"
-            placeholder="Ex.: Studio Botânica"
-            class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
-          />
+        <!-- Mensagem de erro -->
+        <div
+          id="feedback-erro"
+          class="hidden mb-4 p-3.5 rounded-2xl bg-red-100 text-red-900 text-xs font-medium"
+        ></div>
+
+        <!-- ETAPA 1: AUTENTICAÇÃO ANTI-BOT -->
+        <div id="etapa-auth" class="space-y-4">
+          <p class="text-sm text-[#13221c]/75 leading-relaxed">
+            Para proteger seu atendimento contra robôs de spam e manter seus
+            dados em sigilo, confirme sua conta Google antes de enviar a
+            mensagem.
+          </p>
+
+          <button
+            id="btn-login-google"
+            type="button"
+            class="w-full inline-flex items-center justify-center gap-3 bg-[#13221c] text-white text-sm font-semibold py-3.5 px-5 rounded-full hover:bg-[#1e352c] transition-colors"
+          >
+            Continuar com Google
+          </button>
+
+          <p class="text-[11px] text-[#13221c]/50 text-center">
+            Nenhum dado fica visível publicamente. Protegido por Firebase App
+            Check.
+          </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 gap-3">
-          <div>
-            <label for="campo-servico" class="block text-xs font-bold text-[#13221c] mb-1">O que você precisa?</label>
-            <select
-              id="campo-servico"
-              class="w-full rounded-xl border border-black/15 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+        <!-- ETAPA 2: FORMULÁRIO DE SOLICITAÇÃO -->
+        <form id="form-orcamento" class="hidden space-y-4">
+          <div
+            class="flex items-center justify-between bg-[#eff2e8] px-4 py-2.5 rounded-2xl text-xs"
+          >
+            <div>
+              <span
+                id="usuario-logado-nome"
+                class="font-bold text-[#13221c] block"
+              ></span>
+              <span id="usuario-logado-email" class="text-[#13221c]/60"></span>
+            </div>
+            <button
+              id="btn-trocar-conta"
+              type="button"
+              class="underline font-semibold text-[#13221c]/75 hover:text-[#13221c]"
             >
-              <option value="Perfil da Empresa no Google">Perfil da Empresa no Google</option>
-              <option value="Criação de site profissional">Criação de site profissional</option>
-              <option value="Manutenção e suporte contínuo">Manutenção e suporte contínuo</option>
-              <option value="Combo: Google + Site">Combo: Google + Site</option>
-            </select>
+              Trocar conta
+            </button>
           </div>
 
           <div>
-            <label for="campo-canal" class="block text-xs font-bold text-[#13221c] mb-1">Como prefere receber retorno?</label>
-            <select
-              id="campo-canal"
-              class="w-full rounded-xl border border-black/15 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+            <label
+              for="campo-empresa"
+              class="block text-xs font-bold text-[#13221c] mb-1"
+              >Nome da empresa ou negócio *</label
             >
-              <option value="WhatsApp">WhatsApp</option>
-              <option value="E-mail">E-mail</option>
-              <option value="Ligação">Ligação</option>
-            </select>
+            <input
+              id="campo-empresa"
+              type="text"
+              required
+              maxlength="120"
+              placeholder="Ex.: Studio Botânica"
+              class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+            />
           </div>
-        </div>
 
-        <div>
-          <label for="campo-contato" class="block text-xs font-bold text-[#13221c] mb-1">Seu WhatsApp ou telefone (opcional se preferir e-mail)</label>
-          <input
-            id="campo-contato"
-            type="text"
-            maxlength="60"
-            placeholder="(15) 99999-9999"
-            class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
-          />
-        </div>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <div>
+              <label
+                for="campo-servico"
+                class="block text-xs font-bold text-[#13221c] mb-1"
+                >O que você precisa?</label
+              >
+              <select
+                id="campo-servico"
+                class="w-full rounded-xl border border-black/15 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+              >
+                <option value="Perfil da Empresa no Google">
+                  Perfil da Empresa no Google
+                </option>
+                <option value="Criação de site profissional">
+                  Criação de site profissional
+                </option>
+                <option value="Manutenção e suporte contínuo">
+                  Manutenção e suporte contínuo
+                </option>
+                <option value="Combo: Google + Site">
+                  Combo: Google + Site
+                </option>
+              </select>
+            </div>
 
-        <div>
-          <label for="campo-mensagem" class="block text-xs font-bold text-[#13221c] mb-1">Conte brevemente sobre o seu negócio *</label>
-          <textarea
-            id="campo-mensagem"
-            rows="3"
-            required
-            minlength="10"
-            maxlength="2000"
-            placeholder="Ex.: Tenho uma cafeteria e quero organizar nosso perfil no Google Maps e criar um site simples."
-            class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
-          ></textarea>
-        </div>
+            <div>
+              <label
+                for="campo-canal"
+                class="block text-xs font-bold text-[#13221c] mb-1"
+                >Como prefere receber retorno?</label
+              >
+              <select
+                id="campo-canal"
+                class="w-full rounded-xl border border-black/15 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+              >
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="E-mail">E-mail</option>
+                <option value="Ligação">Ligação</option>
+              </select>
+            </div>
+          </div>
 
-        <button
-          id="btn-submit-orcamento"
-          type="submit"
-          class="w-full bg-[#13221c] text-white text-sm font-bold py-3.5 px-6 rounded-full hover:bg-[#1e352c] transition-colors"
-        >
-          Enviar solicitação ↗
-        </button>
-      </form>
+          <div>
+            <label
+              for="campo-contato"
+              class="block text-xs font-bold text-[#13221c] mb-1"
+              >Seu WhatsApp ou telefone (opcional se preferir e-mail)</label
+            >
+            <input
+              id="campo-contato"
+              type="text"
+              maxlength="60"
+              placeholder="(15) 99999-9999"
+              class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+            />
+          </div>
 
-      <!-- ETAPA 3: CONFIRMAÇÃO -->
-      <div id="etapa-sucesso" class="hidden text-center py-6 space-y-4">
-        <div class="w-12 h-12 rounded-full bg-[#d7f466] text-[#13221c] font-extrabold text-xl flex items-center justify-center mx-auto">
-          ✓
+          <div>
+            <label
+              for="campo-mensagem"
+              class="block text-xs font-bold text-[#13221c] mb-1"
+              >Conte brevemente sobre o seu negócio *</label
+            >
+            <textarea
+              id="campo-mensagem"
+              rows="3"
+              required
+              minlength="10"
+              maxlength="2000"
+              placeholder="Ex.: Tenho uma cafeteria e quero organizar nosso perfil no Google Maps e criar um site simples."
+              class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-[#13221c]"
+            ></textarea>
+          </div>
+
+          <button
+            id="btn-submit-orcamento"
+            type="submit"
+            class="w-full bg-[#13221c] text-white text-sm font-bold py-3.5 px-6 rounded-full hover:bg-[#1e352c] transition-colors"
+          >
+            Enviar solicitação ↗
+          </button>
+        </form>
+
+        <!-- ETAPA 3: CONFIRMAÇÃO -->
+        <div id="etapa-sucesso" class="hidden text-center py-6 space-y-4">
+          <div
+            class="w-12 h-12 rounded-full bg-[#d7f466] text-[#13221c] font-extrabold text-xl flex items-center justify-center mx-auto"
+          >
+            ✓
+          </div>
+          <h4 class="text-xl font-extrabold text-[#13221c]">
+            Solicitação enviada!
+          </h4>
+          <p class="text-sm text-[#13221c]/70 max-w-sm mx-auto">
+            Recebemos suas informações com segurança. Em breve a equipe da GBR's
+            entra em contato pelo canal escolhido.
+          </p>
+          <button
+            id="btn-novo-envio"
+            type="button"
+            class="text-xs font-bold underline text-[#13221c]/70 hover:text-[#13221c]"
+          >
+            Enviar outra mensagem
+          </button>
         </div>
-        <h4 class="text-xl font-extrabold text-[#13221c]">Solicitação enviada!</h4>
-        <p class="text-sm text-[#13221c]/70 max-w-sm mx-auto">
-          Recebemos suas informações com segurança. Em breve a equipe da GBR's entra em contato pelo canal escolhido.
-        </p>
-        <button
-          id="btn-novo-envio"
-          type="button"
-          class="text-xs font-bold underline text-[#13221c]/70 hover:text-[#13221c]"
-        >
-          Enviar outra mensagem
-        </button>
       </div>
     </div>
-  </div>
 
-  <!-- Script principal como ES Module -->
-  <script type="module" src="./assets/js/app.js"></script>
-</body>
+    <!-- Script principal como ES Module -->
+    <script type="module" src="./assets/js/app.js"></script>
+  </body>
 </html>
